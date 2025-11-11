@@ -3,6 +3,10 @@ import Foundation
 #if canImport(Alamofire)
 public class AlamofireAdapter {
     
+    public init() {
+        
+    }
+    
     public func printSomething() {
         print("Alamofire detected")
     }
