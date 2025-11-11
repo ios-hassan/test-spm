@@ -10,7 +10,11 @@ public class AlamofireAdapter {
     
     public func printSomething() {
         print("Alamofire detected")
-        
+        let parameters: [String: Any] = [
+            "title": "foo",
+            "body": "bar",
+            "userId": 1
+        ]
         AF.request("https://jsonplaceholder.typicode.com/posts",
                    method: .post,
                    parameters: parameters,
