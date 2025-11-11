@@ -9,6 +9,22 @@ public class AlamofireAdapter {
     
     public func printSomething() {
         print("Alamofire detected")
+        
+        AF.request("https://jsonplaceholder.typicode.com/posts",
+                   method: .post,
+                   parameters: parameters,
+                   encoding: JSONEncoding.default)
+        .responseData { response in
+            switch response.result {
+            case .success(let data):
+                if let jsonString = String(data: data, encoding:
+                        .utf8) {
+                    print("Response String: \(jsonString)")
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
     }
 }
 #endif
