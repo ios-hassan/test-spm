@@ -1,6 +1,7 @@
 import Foundation
 
 #if canImport(Alamofire)
+import Alamofire
 public class AlamofireAdapter {
     
     public init() {
