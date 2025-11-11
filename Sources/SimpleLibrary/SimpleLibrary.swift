@@ -2,7 +2,6 @@ import Foundation
 
 #if canImport(Alamofire)
 public class AlamofireAdapter {
-    public static let shared = AlamofireAdapter()
     
     public func printSomething() {
         print("Alamofire detected")
